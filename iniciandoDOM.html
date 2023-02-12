@@ -5,8 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudos sobre DOM</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        //window.document.write('Está escrito assim na tag p 0 : ' + p1.innerText)//mostre o texto dentro da tag
+        document.write(p1.innerHTML)//mostra com traços do html, o negrito que envolve uma das palavras
+        var d = window.document.getElementById('msg')
+        d.style.background= 'green'
+        d.innerHTML = "Estou aguardando...."
+    </script>
 </body>
 </html>
